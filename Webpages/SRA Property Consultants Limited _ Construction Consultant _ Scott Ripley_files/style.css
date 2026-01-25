@@ -1,0 +1,2047 @@
+@charset "UTF-8";
+h1, h2, h3, h4, p {
+  -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 {
+  margin-top: 0; }
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  color: #2b5681;
+  font-size: 30px;
+  line-height: 44px;
+  margin-bottom: 20px; }
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  color: #2b5681;
+  font-size: 30px;
+  line-height: 44px;
+  margin-bottom: 20px; }
+
+h3 {
+  font-family: "Raleway", sans-serif;
+  color: #2b5681;
+  font-size: 24px;
+  line-height: 38px;
+  margin-bottom: 20px; }
+
+h4 {
+  font-family: "Raleway", sans-serif;
+  color: #2b5681;
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 20px; }
+
+p {
+  font-family: "Raleway", sans-serif;
+  color: #797979;
+  font-size: 17px;
+  line-height: 30px;
+  margin-top: 0;
+  margin-bottom: 20px; }
+
+a {
+  text-decoration: none; }
+
+p a {
+  color: #4c7ab8;
+  text-decoration: none; }
+
+.white {
+  color: #fff; }
+
+.black {
+  color: #000; }
+
+.blue {
+  color: #70aada; }
+
+.small {
+  font-size: 12px;
+  line-height: 24px; }
+
+.large {
+  font-size: 30px;
+  line-height: 34px; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.align-center {
+  text-align: center; }
+
+.align-right {
+  text-align: right; }
+
+.align-left {
+  text-align: left; }
+
+.justified {
+  text-align: justify; }
+
+.thin {
+  font-weight: 300; }
+
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #2b5681; }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #fff; }
+
+.break {
+  width: 100%;
+  height: 30px; }
+
+.clear {
+  clear: both; }
+
+.section, .main {
+  *zoom: 1; }
+
+.main:before, .main:after, .dark-section:before, .dark-section:after, .menu-section:before, .menu-section:after {
+  display: table;
+  content: "";
+  line-height: 0; }
+
+.main:after, .dark-section:after, .menu-section:after {
+  clear: both; }
+
+::selection {
+  background: #5485b6; }
+
+::-moz-selection {
+  background: #5485b6; }
+
+::-webkit-selection {
+  background: #5485b6; }
+
+.main, .full, .half, .third, .quarter, .fifth, .three-quarters, .one-quarter, .one-third, .two-thirds, .eighth, .sixth, .left, .right, .form-input, .form-select, .form-textarea, .cookiePolicy, .half-list li {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.main {
+  width: 1320px;
+  padding: 0 10px;
+  margin: auto; }
+
+.full {
+  width: 100%;
+  padding: 0 10px; }
+
+.half {
+  width: 50%;
+  padding: 0 10px;
+  float: left;
+  margin-bottom: 20px;
+  position: relative; }
+
+.third {
+  width: 33.3%;
+  padding: 0 10px;
+  float: left;
+  margin-bottom: 20px; }
+
+.quarter {
+  width: 25%;
+  padding: 0 10px;
+  float: left;
+  margin-bottom: 20px; }
+
+.fifth {
+  width: 20%;
+  padding: 0 10px;
+  float: left;
+  margin-bottom: 20px; }
+
+.sixth {
+  width: 16.6666667%;
+  padding: 0 10px;
+  float: left; }
+
+.eighth {
+  width: 12.5%;
+  padding: 0 10px;
+  float: left;
+  margin-bottom: 20px; }
+
+.three-quarters {
+  width: 75%;
+  padding: 0 10px;
+  float: left;
+  margin-bottom: 20px; }
+
+.one-quarter {
+  width: 25%;
+  padding: 0 10px;
+  float: left;
+  margin-bottom: 20px; }
+
+.one-third {
+  width: 33.3%;
+  padding: 0 10px;
+  float: left;
+  margin-bottom: 20px; }
+
+.two-thirds {
+  width: 66.6%;
+  padding: 0 10px;
+  float: left;
+  margin-bottom: 20px; }
+
+.single-row .half, .single-row .third, .single-row .quarter, .single-row .fifth, .single-row .sixth, .single-row .eighth {
+  margin-bottom: 0; }
+
+.padded {
+  padding: 60px 10px; }
+
+.padded-more {
+  padding: 100px 10px; }
+
+.padded-content {
+  width: 70%;
+  margin: auto;
+  display: block; }
+
+.center {
+  margin: auto; }
+
+.none {
+  display: none !important; }
+
+img {
+  border: none; }
+
+.full-image {
+  width: 100%;
+  display: block; }
+
+.half-image {
+  width: 50%; }
+
+.quarter-image {
+  width: 25%; }
+
+.no-bottom {
+  margin-bottom: 0 !important; }
+
+.no-padding-bottom {
+  padding-bottom: 0 !important; }
+
+.float-image {
+  float: right;
+  margin: 0 0 20px 20px; }
+
+.float-image-small {
+  float: right;
+  margin: 0 0 20px 20px; }
+
+hr {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-top: 2px dotted #b6b6b7;
+  margin: 30px auto 40px auto; }
+
+.mobile-hr {
+  display: none; }
+
+.border {
+  border: 1px solid #ccc; }
+
+.end {
+  margin-right: 0 !important; }
+
+.rounded-hidden {
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  overflow: hidden; }
+
+.i-margin {
+  margin-right: 10px; }
+
+.relative {
+  position: relative; }
+
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+.block {
+  display: block; }
+
+.vertical-align {
+  vertical-align: middle; }
+
+.display-table {
+  display: table; }
+
+.display-table-cell {
+  display: table-cell; }
+
+.text-image-split {
+  width: 50%;
+  padding: 30px;
+  display: table-cell; }
+
+.text-image-split-bg {
+  width: 100%;
+  display: table-cell; }
+
+.list {
+  padding: 0 0 0 20px;
+  margin: 0;
+  overflow: auto;
+  margin-bottom: 20px;
+  list-style: none; }
+  .list li {
+    padding: 0 1em 0 1em;
+    text-indent: -.7em;
+    font-family: "Raleway", sans-serif;
+    color: #797979;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 300;
+    margin: 10px 0; }
+  .list li::before {
+    content: "• ";
+    color: #2b5681;
+    font-weight: bold;
+    padding-right: 5px; }
+
+.half-list {
+  padding: 0 0 0 20px;
+  margin: 0;
+  overflow: auto;
+  margin-bottom: 20px;
+  list-style: none; }
+  .half-list li {
+    width: 50%;
+    float: left;
+    padding: 0 1em 0 1em;
+    text-indent: -.7em;
+    font-family: "Raleway", sans-serif;
+    color: #797979;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+    margin: 10px 0; }
+  .half-list li::before {
+    content: "• ";
+    color: #2b5681;
+    font-weight: bold;
+    padding-right: 5px; }
+  .half-list a {
+    color: #797979; }
+  .half-list a:hover {
+    color: #70aada; }
+
+#contact-page .half-list {
+  margin: 0;
+  padding: 0; }
+  #contact-page .half-list li::before {
+    content: ""; }
+
+.underline {
+  width: 100px;
+  height: 2px;
+  background: #cecece;
+  margin: 35px auto; }
+
+.mobile-show {
+  display: none; }
+
+.mobile-hide {
+  display: block; }
+
+#video-container {
+  display: none; }
+
+.white-section {
+  width: 100%;
+  background-color: #fff; }
+
+.grey-section {
+  width: 100%;
+  background-color: #ececec; }
+
+.blue-section {
+  width: 100%;
+  background-color: #2b5681; }
+
+#google-map {
+  width: 100%;
+  height: 400px; }
+
+.cover-section-xxx {
+  width: 45%;
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/aside/home/1.jpg) center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.hero-section {
+  height: 700px;
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/homepage/hero/background-2.jpg) center no-repeat;
+  background-size: cover; }
+  .hero-section .black-overlay {
+    height: 700px;
+    width: 33.3%;
+    float: left;
+    padding: 150px 0 150px 30px;
+    background-color: rgba(36, 36, 36, 0.88);
+    box-sizing: border-box; }
+  .hero-section .content {
+    position: relative;
+    margin: auto;
+    padding: 40px;
+    width: 300px;
+    text-align: center; }
+  .hero-section .top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px; }
+  .hero-section .bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px; }
+  .hero-section h2 {
+    font-weight: 300;
+    color: #fff;
+    font-size: 45px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    line-height: 50px; }
+  .hero-section .mobile-strap {
+    font-size: 22px;
+    line-height: 30px; }
+
+.featured-cs {
+  width: 100%;
+  height: 600px;
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/backgrounds/featured-cs.jpg) center no-repeat;
+  background-size: cover;
+  position: relative; }
+  .featured-cs .view-video {
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 200px;
+    transition: all ease .5s; }
+    .featured-cs .view-video img {
+      width: 200px; }
+  .featured-cs .view-video:hover {
+    opacity: 0.7; }
+  .featured-cs .bottom-bar {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/backgrounds/featured-cs-text-bg.svg) top right no-repeat;
+    position: absolute;
+    bottom: 0;
+    background-size: 4000px; }
+    .featured-cs .bottom-bar .cs-container {
+      padding: 40px 0 20px 0; }
+    .featured-cs .bottom-bar .cs-intro {
+      float: left;
+      width: 50%; }
+      .featured-cs .bottom-bar .cs-intro h3 {
+        color: #fff;
+        font-size: 24px;
+        margin-bottom: 0px; }
+      .featured-cs .bottom-bar .cs-intro p {
+        color: #fff;
+        font-size: 14px;
+        margin-bottom: 0; }
+    .featured-cs .bottom-bar .cs-button {
+      width: 20%;
+      float: left;
+      margin-top: 10px; }
+    .featured-cs .bottom-bar .cs-date {
+      width: 110px;
+      text-align: center;
+      position: absolute;
+      right: 90px;
+      top: 40px; }
+      .featured-cs .bottom-bar .cs-date .large {
+        font-size: 40px;
+        font-weight: 300;
+        margin-bottom: 2px; }
+      .featured-cs .bottom-bar .cs-date .medium {
+        font-size: 20px;
+        font-weight: 300;
+        margin-bottom: 2px; }
+      .featured-cs .bottom-bar .cs-date .small {
+        font-size: 14px;
+        font-weight: 300;
+        margin-bottom: 2px; }
+
+.selection {
+  display: block; }
+  .selection .content {
+    width: 75%;
+    height: 100%;
+    margin: 0 auto 30px auto;
+    text-align: center;
+    position: relative;
+    padding-bottom: 30px;
+    box-sizing: border-box; }
+    .selection .content img {
+      width: 100px;
+      height: 60px;
+      margin: 20px auto 10px auto;
+      display: block; }
+    .selection .content h3 {
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 300;
+      margin-bottom: 10px; }
+    .selection .content p {
+      font-size: 13px;
+      line-height: 20px;
+      margin-bottom: 0; }
+    .selection .content .button {
+      width: 100%;
+      font-size: 12px;
+      position: absolute;
+      bottom: 20px; }
+
+.carousel-services .selection .button {
+  display: none; }
+
+.s-page .selection .content {
+  width: 90%; }
+  .s-page .selection .content h3 {
+    font-size: 20px; }
+
+.testominal {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/backgrounds/testimonial-bg.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center; }
+  .testominal p {
+    color: #fff;
+    font-size: 21px; }
+  .testominal h3 {
+    font-size: 18px;
+    color: #fff; }
+    .testominal h3 span {
+      color: #81bde7; }
+
+.blue-img-section {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/backgrounds/blue-img-section.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center; }
+
+.meet-the-team {
+  margin-top: 30px; }
+  .meet-the-team .item .t-member {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    padding: 20px; }
+    .meet-the-team .item .t-member .t-content {
+      width: 100%;
+      margin: auto;
+      background: #fff; }
+      .meet-the-team .item .t-member .t-content .t-text {
+        padding: 30px 30px; }
+        .meet-the-team .item .t-member .t-content .t-text p {
+          font-size: 14px;
+          margin-bottom: 0; }
+        .meet-the-team .item .t-member .t-content .t-text .role {
+          margin-bottom: 5px;
+          color: #2b5681; }
+        .meet-the-team .item .t-member .t-content .t-text h3 {
+          font-size: 20px;
+          margin-bottom: 0; }
+    .meet-the-team .item .t-member .top {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30px; }
+    .meet-the-team .item .t-member .bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 30px; }
+
+.team-members {
+  margin-top: 30px; }
+  .team-members .team-member {
+    margin-bottom: 40px;
+    padding-top: 40px;
+    border-top: 1px solid #33618e; }
+    .team-members .team-member .team-image {
+      width: 33.3%;
+      float: left;
+      padding: 10px;
+      box-sizing: border-box;
+      position: relative; }
+      .team-members .team-member .team-image .tm-title {
+        background-color: #fff;
+        padding: 10px;
+        box-sizing: border-box; }
+        .team-members .team-member .team-image .tm-title h3 {
+          margin-bottom: 0;
+          font-size: 18px;
+          line-height: 22px; }
+        .team-members .team-member .team-image .tm-title p {
+          margin-bottom: 0;
+          font-size: 14px;
+          line-height: 20px; }
+      .team-members .team-member .team-image .tm-top {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 50px; }
+      .team-members .team-member .team-image .tm-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 50px; }
+      .team-members .team-member .team-image img {
+        width: 100%;
+        display: block; }
+      .team-members .team-member .team-image .role {
+        margin-bottom: 5px;
+        color: #2b5681; }
+    .team-members .team-member .team-desc {
+      width: 66.6%;
+      float: left;
+      padding: 0 10px;
+      box-sizing: border-box; }
+      .team-members .team-member .team-desc .team-desc-container {
+        width: 80%;
+        margin: auto;
+        padding: 20px 10px;
+        box-sizing: border-box; }
+        .team-members .team-member .team-desc .team-desc-container h3 {
+          margin-bottom: 10px;
+          font-size: 16px;
+          line-height: 22px;
+          color: #fff;
+          text-align: left; }
+        .team-members .team-member .team-desc .team-desc-container p {
+          font-size: 12px;
+          color: #fff;
+          text-align: left; }
+
+.intro-split {
+  position: relative; }
+  .intro-split .seventy-percent {
+    width: 70%;
+    float: left;
+    padding: 80px;
+    box-sizing: border-box;
+    background: #fff; }
+  .intro-split .thirty-percent {
+    width: 30%;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    -webkit-box-shadow: inset 2px 0px 16px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 2px 0px 16px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 2px 0px 16px -4px rgba(0, 0, 0, 0.75); }
+
+.thirty-about {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/aside/backgrounds/about.jpg) center no-repeat;
+  background-size: cover; }
+
+.thirty-services-sample {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/aside/backgrounds/services-sample.jpg) center no-repeat;
+  background-size: cover; }
+
+.thirty-services {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/aside/backgrounds/services.jpg) center no-repeat;
+  background-size: cover; }
+
+.thirty-careers {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/aside/backgrounds/careers.jpg) center no-repeat;
+  background-size: cover; }
+
+.thirty-contact {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/aside/backgrounds/contact.jpg) center no-repeat;
+  background-size: cover; }
+
+.thirty-projects {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/aside/backgrounds/projects.jpg) center no-repeat;
+  background-size: cover; }
+
+.thirty-projects-sample {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/aside/backgrounds/projects-sample.jpg) center no-repeat;
+  background-size: cover; }
+
+.thirty-projects-eider-house-manchester {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/aside/backgrounds/eider-house-manchester.jpg) center no-repeat;
+  background-size: cover; }
+
+.thirty-projects-premier-inn-leeds {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/aside/backgrounds/premier-inn-leeds.jpg) center no-repeat;
+  background-size: cover; }
+
+.thirty-projects-matrix-harrogate {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/aside/backgrounds/matrix-harrogate.jpg) center no-repeat;
+  background-size: cover; }
+
+.thirty-projects-victoria-park-house {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/aside/backgrounds/victoria-park-house.jpg) center no-repeat;
+  background-size: cover; }
+
+.thirty-projects-five-towns-park {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/aside/backgrounds/five-towns-park.jpg) center no-repeat;
+  background-size: cover; }
+
+.thirty-projects-freemans-court {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/aside/backgrounds/freemans-court.jpg) center no-repeat;
+  background-size: cover; }
+
+.thirty-projects-regent-street-leeds {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/aside/backgrounds/regent-street-leeds.jpg) center no-repeat;
+  background-size: cover; }
+
+.thirty-projects-park-place-leeds {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/aside/backgrounds/park-place-leeds.jpg) center no-repeat;
+  background-size: cover; }
+
+.thirty-projects-george-street {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/aside/backgrounds/george-street.jpg) center no-repeat;
+  background-size: cover; }
+
+.thirty-projects-triangle-student {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/aside/backgrounds/triangle-student.jpg) center no-repeat;
+  background-size: cover; }
+
+.proj-sel .container {
+  width: 90%;
+  margin: auto; }
+  .proj-sel .container h3 {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 15px; }
+  .proj-sel .container .text {
+    padding: 30px 30px;
+    background-color: #fff;
+    height: 100%;
+    box-sizing: border-box; }
+  .proj-sel .container p {
+    font-size: 12px; }
+
+.carousel-projects {
+  margin: 20px 0 10px 0; }
+
+header {
+  width: 100%;
+  height: 70px;
+  background-color: #363636;
+  border-bottom: 1px solid #5097d6; }
+
+.logo {
+  width: 100px;
+  height: 70px;
+  float: right;
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/headers/logo.svg) center no-repeat;
+  display: block; }
+
+.header-right {
+  width: 300px;
+  float: right;
+  margin-top: 25px; }
+
+.header-right p {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  color: #fff;
+  text-align: right; }
+
+.page-header {
+  width: 100%;
+  height: 260px;
+  border-bottom: 2px solid #5097d6; }
+
+.socials {
+  float: right;
+  margin-top: 27px;
+  margin-right: 20px; }
+  .socials i {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 25px;
+    transition: transform 0.5s; }
+  .socials a:hover i {
+    -moz-transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25); }
+
+.ph-about {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/headers/about.jpg) center no-repeat; }
+
+nav {
+  width: 1240px;
+  height: 70px;
+  margin: auto;
+  font-family: "Raleway", sans-serif; }
+
+nav #desktop-menu > ul {
+  width: 700px;
+  float: left;
+  height: 70px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+nav #desktop-menu > ul > li {
+  width: 14.2%;
+  height: 70px;
+  float: left;
+  font-size: 14px;
+  color: #fff;
+  line-height: 20px;
+  -webkit-font-smoothing: antialiased; }
+
+nav #desktop-menu > ul > li:hover {
+  color: #fff; }
+
+nav #desktop-menu > ul > li > a {
+  width: 100%;
+  height: 20px;
+  padding: 25px 0;
+  margin: 0px;
+  display: block;
+  color: #fff;
+  text-align: center;
+  transition: background-color .25s ease-in-out;
+  -moz-transition: background-color .25s ease-in-out;
+  -webkit-transition: background-color .25s ease-in-out;
+  text-transform: uppercase; }
+
+nav #desktop-menu > ul > li > a:hover {
+  margin: 0px;
+  display: block;
+  color: #fff;
+  border-right: none;
+  background-color: #252525; }
+
+nav #desktop-menu ul a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  height: auto;
+  width: auto;
+  cursor: pointer;
+  position: relative; }
+
+nav #desktop-menu ul li:hover > a {
+  color: #fff;
+  background-color: #252525; }
+
+nav #desktop-menu > ul > li > ul {
+  font-family: "Raleway", sans-serif;
+  height: auto;
+  background-color: #252525;
+  display: block;
+  left: -999em;
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  z-index: 999;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+  color: #fff; }
+
+nav #desktop-menu li:hover ul, nav #desktop-menu li.sfhover ul {
+  left: auto; }
+
+nav #desktop-menu > ul > li > ul > li {
+  float: left;
+  clear: both; }
+
+nav #desktop-menu > ul > li > ul > li > a {
+  width: 200px;
+  float: left;
+  margin: 0px;
+  display: block;
+  padding: 20px;
+  color: #fff;
+  clear: both; }
+
+nav #desktop-menu > ul > li > ul > li > a:hover {
+  background-color: #363636; }
+
+nav #desktop-menu ul li ul li:hover {
+  color: #fff;
+  z-index: 30001;
+  background-color: #363636;
+  background-image: none; }
+
+a.meanmenu-reveal {
+  display: none; }
+
+.mean-container .mean-bar {
+  width: 120px;
+  position: fixed;
+  top: 6px;
+  padding: 4px 0;
+  min-height: 45px;
+  z-index: 999;
+  clear: both;
+  color: #fff; }
+
+.mean-container a.meanmenu-reveal {
+  width: 110px;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  margin-right: 20px;
+  left: 20px !important;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 55px;
+  display: block;
+  font-family: "Raleway", sans-serif;
+  clear: both;
+  text-align: left !important;
+  -webkit-font-smoothing: antialiased; }
+
+.mean-container .mean-nav {
+  float: left;
+  width: 200px;
+  box-shadow: 1px 1px 1px #333;
+  position: relative;
+  top: 16px;
+  background: #252525;
+  margin-top: 45px;
+  font-family: "Raleway", sans-serif; }
+
+.mean-container .mean-nav ul {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  list-style-type: none; }
+
+.mean-container .mean-nav ul li {
+  position: relative;
+  float: left;
+  width: 100%; }
+
+.mean-container .mean-nav ul li a {
+  display: block;
+  float: left;
+  width: 80%;
+  padding: 1em 10%;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  border-bottom: 1px solid #363636;
+  text-decoration: none;
+  font-weight: 100; }
+
+.mean-container .mean-nav ul li li a {
+  width: 90%;
+  padding: 1em 5%;
+  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+  text-shadow: none !important;
+  visibility: visible; }
+
+.mean-container .mean-nav ul li.mean-last a {
+  margin-bottom: 0; }
+
+.mean-container .mean-nav ul li li li a {
+  width: 70%;
+  padding: 1em 15%; }
+
+.mean-container .mean-nav ul li li li li a {
+  width: 60%;
+  padding: 1em 20%; }
+
+.mean-container .mean-nav ul li li li li li a {
+  width: 50%;
+  padding: 1em 25%; }
+
+.mean-container .mean-nav ul li a:hover {
+  background: #1d75a1;
+  background: rgba(255, 255, 255, 0.1); }
+
+.mean-container .mean-nav ul li a.mean-expand {
+  width: 26px;
+  height: 26px;
+  border: none !important;
+  padding: 12px !important;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  font-weight: 700;
+  line-height: 28px; }
+
+.mean-container .mean-nav ul li a.mean-expand:hover {
+  background: none; }
+
+.mean-container .mean-push {
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  clear: both; }
+
+.mean-nav .wrapper {
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+
+.mean-nav .mobile-hide {
+  display: none; }
+
+ul.sitemap li {
+  font-family: "Raleway", sans-serif;
+  color: #0d242d;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 300;
+  text-decoration: none;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 10px;
+  list-style: none; }
+
+ul.sitemap li a {
+  color: #0d242d;
+  text-decoration: none; }
+
+ul.sitemap li a:hover {
+  color: #a27e00; }
+
+ul.sitemap > li > ul > li {
+  font-style: italic; }
+
+.home-slideshow {
+  width: 100%;
+  height: 324px;
+  overflow: hidden !important; }
+
+.slide-container {
+  width: 100%;
+  height: 324px;
+  overflow: hidden !important; }
+
+.slide {
+  width: 940px;
+  height: 280px;
+  display: block;
+  padding-top: 180px;
+  margin: auto;
+  text-decoration: none; }
+
+.slide-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 88px;
+  line-height: 90px;
+  text-align: center;
+  color: #252525;
+  padding-top: 50px; }
+
+.slide-description {
+  width: 100%;
+  height: 50px;
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/backgrounds/slide-description-bg.png) top left repeat;
+  padding: 40px 0;
+  position: absolute;
+  bottom: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 25px;
+  color: #fff;
+  text-align: center; }
+
+.s-bursting {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/banners/home/bursting.jpg) top center repeat-x; }
+
+.s-bursting-2 {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/banners/home/bursting-2.jpg) top center repeat-x; }
+
+.home-slideshow .next {
+  width: 46px;
+  height: 46px;
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/icons/next.png) center no-repeat;
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  z-index: 999;
+  cursor: pointer;
+  right: 2%; }
+
+.home-slideshow .prev {
+  width: 46px;
+  height: 46px;
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/icons/prev.png) center no-repeat;
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  z-index: 999;
+  cursor: pointer;
+  left: 2%; }
+
+.home-slideshow .pager {
+  margin: auto;
+  text-align: center;
+  margin-top: -45px;
+  position: relative;
+  z-index: 1000; }
+
+.home-slideshow .pager span {
+  color: #fff;
+  font-size: 35px;
+  margin: 0 2px; }
+
+.home-slideshow .pager .cycle-pager-active {
+  color: #13a6a4; }
+
+.home-slideshow .pager > * {
+  cursor: pointer; }
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  border: none;
+  border-bottom: 2px solid #dfdfdf;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  line-height: 40px;
+  color: #797979;
+  text-align: left;
+  padding-left: 20px; }
+
+.form-select {
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  border: none;
+  border-bottom: 2px solid #dfdfdf;
+  margin-bottom: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  line-height: 40px;
+  color: #797979;
+  text-align: left;
+  padding-left: 20px; }
+
+.form-textarea {
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  border: none;
+  border-bottom: 2px solid #dfdfdf;
+  margin-bottom: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  line-height: 40px;
+  color: #797979;
+  text-align: left;
+  padding-left: 20px; }
+
+.form-button {
+  width: 200px;
+  height: 50px;
+  display: block;
+  margin-top: 20px;
+  background-color: rgba(57, 76, 93, 0.7);
+  cursor: pointer;
+  border: 2px solid #2b5681;
+  transition: background-color 0.5s ease;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  line-height: 40px;
+  -webkit-font-smoothing: antialiased; }
+
+.form-button:hover {
+  background: #2b5681; }
+
+.qc-ht {
+  display: none !important; }
+
+.error {
+  color: red;
+  font-weight: bold; }
+
+.form-input::-webkit-input-placeholder {
+  color: #ccc; }
+
+.form-input:-moz-placeholder {
+  color: #ccc; }
+
+.form-input::-moz-placeholder {
+  color: #ccc; }
+
+.form-input:-ms-input-placeholder {
+  color: #ccc; }
+
+.form-textarea::-webkit-input-placeholder {
+  color: #ccc; }
+
+.form-textarea:-moz-placeholder {
+  color: #ccc; }
+
+.form-textarea::-moz-placeholder {
+  color: #ccc; }
+
+.form-textarea:-ms-input-placeholder {
+  color: #ccc; }
+
+.button {
+  width: 180px;
+  height: 40px;
+  display: block;
+  background-color: rgba(57, 76, 93, 0.7);
+  cursor: pointer;
+  border: 2px solid #fff;
+  transition: background-color 0.5s ease;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  line-height: 40px;
+  -webkit-font-smoothing: antialiased; }
+
+.button:hover {
+  background-color: #19598a; }
+
+.border-button {
+  width: 180px;
+  height: 50px;
+  display: block;
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/backgrounds/button.svg) no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color: #2b5681;
+  line-height: 50px;
+  -webkit-font-smoothing: antialiased; }
+
+.p-button {
+  width: 100%;
+  height: 40px;
+  display: block;
+  background-color: rgba(57, 76, 93, 0.7);
+  cursor: pointer;
+  border: 2px solid #2b5681;
+  transition: background-color 0.5s ease;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  line-height: 40px;
+  -webkit-font-smoothing: antialiased; }
+
+.p-button:hover {
+  background: #2b5681; }
+
+.button-full {
+  width: 100%;
+  height: 40px;
+  display: block;
+  background-color: #4c7ab8;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  line-height: 40px;
+  -webkit-font-smoothing: antialiased; }
+
+.button-full:hover {
+  background-color: #19598a; }
+
+footer {
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/backgrounds/footer.jpg) center no-repeat;
+  background-size: cover; }
+  footer .logo-f {
+    width: 40%;
+    height: auto;
+    margin: auto;
+    display: block; }
+  footer .half {
+    text-align: center; }
+    footer .half p a {
+      font-size: 20px;
+      font-weight: 600;
+      color: #fff; }
+    footer .half p {
+      color: #fff;
+      font-size: 18px; }
+  footer .socials-f {
+    margin: auto; }
+    footer .socials-f i {
+      color: #fff;
+      font-size: 16px;
+      margin: 0 13px;
+      transition: transform 0.5s; }
+    footer .socials-f a:hover i {
+      -moz-transform: scale(1.25);
+      -webkit-transform: scale(1.25);
+      transform: scale(1.25); }
+  footer .terms {
+    border-top: 1px solid #4ccfff;
+    text-align: center;
+    padding-top: 15px; }
+    footer .terms p {
+      line-height: 20px; }
+    footer .terms p a {
+      color: #fff;
+      font-size: 12px;
+      transition: color 0.5s; }
+    footer .terms p a:hover {
+      color: #81bde7; }
+
+.cookieMain {
+  width: 100%;
+  height: auto;
+  background-color: #333;
+  position: relative;
+  z-index: 9999; }
+
+.cookiePolicy {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 10px 20px;
+  margin: 0 auto;
+  background-color: #333;
+  opacity: 0.75;
+  font-family: 'Arial', sans-serif;
+  color: #ebe7dd;
+  font-weight: 300;
+  text-align: center;
+  font-size: 10px;
+  line-height: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.cookiePolicy a {
+  color: #fff;
+  transition: color 0.5s ease; }
+
+.cookiePolicy a:hover {
+  color: #0d242d; }
+
+.cookie-form {
+  display: inline;
+  margin: 0; }
+
+.cookie-form input[type=submit] {
+  font-size: 10px;
+  font-family: sans-serif; }
+
+.cookie-button {
+  font-weight: bold;
+  background-color: #000;
+  color: #fff;
+  border: 0;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease; }
+
+.cookie-button:hover {
+  background-color: #737373; }
+
+.fancybox-wrap,
+.fancybox-skin,
+.fancybox-outer,
+.fancybox-inner,
+.fancybox-image,
+.fancybox-wrap iframe,
+.fancybox-wrap object,
+.fancybox-nav,
+.fancybox-nav span,
+.fancybox-tmp {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  vertical-align: top; }
+
+.fancybox-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8020; }
+
+.fancybox-skin {
+  position: relative;
+  background: #f9f9f9;
+  color: #444;
+  text-shadow: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
+
+.fancybox-opened {
+  z-index: 8030; }
+
+.fancybox-opened .fancybox-skin {
+  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); }
+
+.fancybox-outer, .fancybox-inner {
+  position: relative; }
+
+.fancybox-inner {
+  overflow: hidden; }
+
+.fancybox-type-iframe .fancybox-inner {
+  -webkit-overflow-scrolling: touch; }
+
+.fancybox-error {
+  color: #444;
+  font: 14px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 15px;
+  white-space: nowrap; }
+
+.fancybox-image, .fancybox-iframe {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.fancybox-image {
+  max-width: 100%;
+  max-height: 100%; }
+
+#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+  background-image: url("/web/20181110160607im_/https://www.sraconsult.co.uk/img/fancybox/fancybox_sprite.png"); }
+
+#fancybox-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -22px;
+  margin-left: -22px;
+  background-position: 0 -108px;
+  opacity: 0.8;
+  cursor: pointer;
+  z-index: 8060; }
+
+#fancybox-loading div {
+  width: 44px;
+  height: 44px;
+  background: url("/web/20181110160607im_/https://www.sraconsult.co.uk/img/fancybox/fancybox_loading.gif") center center no-repeat; }
+
+.fancybox-close {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 8040; }
+
+.fancybox-nav {
+  position: absolute;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  background: transparent url("/web/20181110160607im_/https://www.sraconsult.co.uk/img/fancybox/blank.gif");
+  /* helps IE */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  z-index: 8040; }
+
+.fancybox-prev {
+  left: 0; }
+
+.fancybox-next {
+  right: 0; }
+
+.fancybox-nav span {
+  position: absolute;
+  top: 50%;
+  width: 36px;
+  height: 34px;
+  margin-top: -18px;
+  cursor: pointer;
+  z-index: 8040;
+  visibility: hidden; }
+
+.fancybox-prev span {
+  left: 10px;
+  background-position: 0 -36px; }
+
+.fancybox-next span {
+  right: 10px;
+  background-position: 0 -72px; }
+
+.fancybox-nav:hover span {
+  visibility: visible; }
+
+.fancybox-tmp {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+  visibility: hidden;
+  max-width: 99999px;
+  max-height: 99999px;
+  overflow: visible !important; }
+
+/* Overlay helper */
+.fancybox-lock {
+  overflow: hidden !important;
+  width: auto; }
+
+.fancybox-lock body {
+  overflow: hidden !important; }
+
+.fancybox-lock-test {
+  overflow-y: hidden !important; }
+
+.fancybox-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: none;
+  z-index: 8010;
+  background: url("/web/20181110160607im_/https://www.sraconsult.co.uk/img/fancybox/fancybox_overlay.png"); }
+
+.fancybox-overlay-fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0; }
+
+.fancybox-lock .fancybox-overlay {
+  overflow: auto;
+  overflow-y: scroll; }
+
+/* Title helper */
+.fancybox-title {
+  visibility: hidden;
+  font: normal 13px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+  text-shadow: none;
+  z-index: 8050; }
+
+.fancybox-opened .fancybox-title {
+  visibility: visible; }
+
+.fancybox-title-float-wrap {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  margin-bottom: -35px;
+  z-index: 8050;
+  text-align: center; }
+
+.fancybox-title-float-wrap .child {
+  display: inline-block;
+  margin-right: -100%;
+  padding: 2px 20px;
+  background: transparent;
+  /* Fallback for web browsers that doesn't support RGBa */
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  text-shadow: 0 1px 2px #222;
+  color: #fff;
+  font-weight: bold;
+  line-height: 24px;
+  white-space: nowrap; }
+
+.fancybox-title-outside-wrap {
+  position: relative;
+  margin-top: 10px;
+  color: #fff; }
+
+.fancybox-title-inside-wrap {
+  padding-top: 10px; }
+
+.fancybox-title-over-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  padding: 10px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.8); }
+
+/*Retina graphics!*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-image: url("/web/20181110160607im_/https://www.sraconsult.co.uk/img/fancybox/fancybox_sprite@2x.png");
+    background-size: 44px 152px;
+    /*The size of the normal image, half the size of the hi-res image*/ }
+
+  #fancybox-loading div {
+    background-image: url("/web/20181110160607im_/https://www.sraconsult.co.uk/img/fancybox/fancybox_loading@2x.gif");
+    background-size: 24px 24px;
+    /*The size of the normal image, half the size of the hi-res image*/ } }
+@media only screen and (max-width: 1280px) {
+  .main {
+    width: 100%; }
+
+  .eighth {
+    width: 25%; }
+
+  .hero-section {
+    height: 500px;
+    background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/img/homepage/hero/background-mobile.jpg) center no-repeat;
+    padding-top: 150px;
+    background-size: cover; }
+    .hero-section .black-overlay {
+      width: 100%;
+      height: auto;
+      float: none;
+      padding: 40px 0; }
+
+  nav {
+    width: 100%; } }
+@media only screen and (max-width: 1000px) {
+  .quarter {
+    width: 50%; }
+
+  .eighth {
+    width: 25%; }
+
+  body {
+    padding-top: 70px; }
+
+  nav {
+    height: auto; }
+
+  header {
+    position: fixed;
+    top: 0;
+    z-index: 101; }
+
+  #desktop-menu {
+    display: none; }
+
+  .selection {
+    margin-bottom: 20px; }
+
+  .single-row {
+    padding-bottom: 10px; }
+
+  .single-row .quarter {
+    margin-bottom: 20px; }
+
+  .intro-split .seventy-percent {
+    width: 100%;
+    padding: 60px; }
+  .intro-split .thirty-percent {
+    width: 100%;
+    display: block;
+    height: 300px;
+    position: relative; }
+
+  .mobile-show {
+    display: block; }
+
+  .mobile-hide {
+    display: none; }
+
+  .bottom-bar {
+    background-position: left top !important; }
+
+  .cs-intro {
+    width: 65% !important; }
+
+  .cs-button {
+    width: 30% !important;
+    padding-left: 5%; }
+
+  .cs-date {
+    display: none; } }
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 24px;
+    line-height: 34px; }
+
+  footer .half {
+    width: 100%;
+    float: none; } }
+@media only screen and (max-width: 750px) {
+  .cs-intro {
+    width: 80% !important;
+    float: none !important;
+    text-align: center;
+    margin: 0 auto 20px auto; }
+
+  .cs-button {
+    width: 100% !important;
+    padding-left: 0;
+    float: none !important;
+    text-align: center; }
+    .cs-button .button {
+      margin: auto; }
+
+  #services-page .selection {
+    width: 50%; } }
+@media only screen and (max-width: 700px) {
+  .quarter {
+    width: 50%; }
+
+  .eighth {
+    width: 50%; }
+
+  .home-slideshow-container, .home-slideshow {
+    height: 300px;
+    margin-top: 0; }
+
+  .slide-container {
+    background-size: 1000px;
+    height: 300px; }
+
+  .float-image {
+    width: 100%;
+    float: none;
+    margin: 0 0 20px 0; }
+
+  .float-image-small {
+    width: 30%; }
+
+  .intro-split .seventy-percent {
+    padding: 50px 70px; } }
+@media only screen and (max-width: 650px) {
+  .team-members .team-member .team-image {
+    width: 60%;
+    margin: auto;
+    float: none; }
+  .team-members .team-member .team-desc {
+    width: 100%;
+    float: none; }
+    .team-members .team-member .team-desc .team-desc-container {
+      width: 90%; }
+      .team-members .team-member .team-desc .team-desc-container h3 {
+        text-align: center; }
+      .team-members .team-member .team-desc .team-desc-container p {
+        text-align: center; }
+
+  .featured-cs .view-video {
+    top: 14%; } }
+@media only screen and (max-width: 600px) {
+  .half {
+    width: 100%; }
+
+  .quarter {
+    width: 50%; }
+
+  .eighth {
+    width: 50%; }
+
+  .third {
+    width: 100%; }
+
+  .main-contact .form-field, .main-contact .form-select {
+    width: 98%;
+    margin-bottom: 20px;
+    float: none; }
+
+  .half-list li {
+    width: 100%;
+    float: none; }
+
+  .socials {
+    margin-right: 10px; }
+    .socials i {
+      margin-right: 15px; }
+
+  .mobile-hr {
+    display: block; }
+
+  .selections .third {
+    margin-bottom: 20px; }
+
+  .single-row {
+    padding-bottom: 10px; }
+
+  .single-row .third {
+    margin-bottom: 20px; }
+
+  .hero-section .content {
+    width: 60%; }
+
+  #services-page .selection {
+    width: 100%; }
+
+  #services-page .selection .content .button {
+    position: relative;
+    bottom: inherit;
+    margin-top: 20px; } }
+@media only screen and (max-width: 500px) {
+  .intro-split .seventy-percent {
+    padding: 50px 30px; }
+
+  .featured-cs .view-video {
+    top: 13%;
+    width: 160px; }
+    .featured-cs .view-video img {
+      width: 160px; } }
+@media only screen and (max-width: 450px) {
+  .quarter {
+    width: 100%; }
+
+  .eighth {
+    width: 100%; }
+
+  .third {
+    width: 100%; }
+
+  .terms {
+    height: auto; } }
+.owl-carousel, .owl-carousel .owl-item {
+  -webkit-tap-highlight-color: transparent;
+  position: relative; }
+
+.owl-carousel {
+  display: none;
+  width: 100%;
+  z-index: 1; }
+
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+  -moz-backface-visibility: hidden; }
+
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0); }
+
+.owl-carousel .owl-item, .owl-carousel .owl-wrapper {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0); }
+
+.owl-carousel .owl-item {
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-touch-callout: none; }
+
+.owl-carousel .owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
+  display: none; }
+
+.no-js .owl-carousel, .owl-carousel.owl-loaded {
+  display: block; }
+
+.owl-carousel .owl-dot, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev {
+  cursor: pointer;
+  cursor: hand;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block; }
+
+.owl-carousel.owl-hidden {
+  opacity: 0; }
+
+.owl-carousel.owl-refresh .owl-item {
+  visibility: hidden; }
+
+.owl-carousel.owl-drag .owl-item {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.owl-carousel.owl-grab {
+  cursor: move;
+  cursor: grab; }
+
+.owl-carousel.owl-rtl {
+  direction: rtl; }
+
+.owl-carousel.owl-rtl .owl-item {
+  float: right; }
+
+.owl-carousel .animated {
+  animation-duration: 1s;
+  animation-fill-mode: both; }
+
+.owl-carousel .owl-animated-in {
+  z-index: 0; }
+
+.owl-carousel .owl-animated-out {
+  z-index: 1; }
+
+.owl-carousel .fadeOut {
+  animation-name: fadeOut; }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+.owl-height {
+  transition: height .5s ease-in-out; }
+
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  transition: opacity .4s ease; }
+
+.owl-carousel .owl-item img.owl-lazy {
+  transform-style: preserve-3d; }
+
+.owl-carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000; }
+
+.owl-carousel .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url(/web/20181110160607im_/https://www.sraconsult.co.uk/css/owl.video.play.png) no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  transition: transform .1s ease; }
+
+.owl-carousel .owl-video-play-icon:hover {
+  -ms-transform: scale(1.3, 1.3);
+  transform: scale(1.3, 1.3); }
+
+.owl-carousel .owl-video-playing .owl-video-play-icon, .owl-carousel .owl-video-playing .owl-video-tn {
+  display: none; }
+
+.owl-carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: opacity .4s ease; }
+
+.owl-carousel .owl-video-frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%; }
+
+.owl-theme .owl-dots, .owl-theme .owl-nav {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent; }
+
+.owl-theme .owl-nav {
+  margin-top: 10px; }
+
+.owl-theme .owl-nav [class*=owl-] {
+  color: #FFF;
+  font-size: 14px;
+  margin: 5px;
+  padding: 4px 7px;
+  background: #D6D6D6;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px; }
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+  background: #869791;
+  color: #FFF;
+  text-decoration: none; }
+
+.owl-theme .owl-nav .disabled {
+  opacity: .5;
+  cursor: default; }
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 10px; }
+
+.owl-theme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1; }
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #D6D6D6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity .2s ease;
+  border-radius: 30px; }
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #869791; }
+
+/*# sourceMappingURL=style.css.map */
+
+/*
+     FILE ARCHIVED ON 16:06:07 Nov 10, 2018 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 14:14:09 Jan 19, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.87
+  exclusion.robots: 0.04
+  exclusion.robots.policy: 0.025
+  esindex: 0.015
+  cdx.remote: 34.379
+  LoadShardBlock: 91.022 (3)
+  PetaboxLoader3.datanode: 113.924 (4)
+  load_resource: 127.242
+  PetaboxLoader3.resolve: 41.587
+*/

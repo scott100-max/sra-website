@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scott Ripley - Career Data from Job Letters</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.7;
+            color: #2c2c2c;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #1a365d 0%, #2d4a77 100%);
+            color: #fff;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.4em;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.1em;
+            opacity: 0.85;
+            font-style: italic;
+        }
+        .content {
+            padding: 50px 45px;
+        }
+        .intro {
+            background: #f8f9fa;
+            padding: 25px 30px;
+            border-left: 4px solid #1a365d;
+            margin-bottom: 40px;
+            font-style: italic;
+            color: #555;
+        }
+        h2 {
+            color: #1a365d;
+            font-size: 1.5em;
+            font-weight: 600;
+            margin: 40px 0 25px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        h2:first-of-type {
+            margin-top: 0;
+        }
+        .employer {
+            background: #fafbfc;
+            border: 1px solid #e8e8e8;
+            border-radius: 4px;
+            padding: 25px 30px;
+            margin-bottom: 25px;
+        }
+        .employer h3 {
+            color: #2d4a77;
+            font-size: 1.25em;
+            margin-bottom: 5px;
+        }
+        .employer .period {
+            color: #888;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+        }
+        .employer .role {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .detail-row {
+            display: flex;
+            padding: 8px 0;
+            border-bottom: 1px dotted #ddd;
+        }
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+        .detail-label {
+            flex: 0 0 160px;
+            color: #666;
+            font-weight: 500;
+        }
+        .detail-value {
+            flex: 1;
+            color: #333;
+        }
+        .salary-progression {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            padding: 15px 20px;
+            margin-top: 15px;
+        }
+        .salary-progression h4 {
+            font-size: 0.95em;
+            color: #1a365d;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .salary-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .salary-item:last-child {
+            border-bottom: none;
+        }
+        .salary-date {
+            color: #666;
+        }
+        .salary-amount {
+            font-weight: 600;
+            color: #2d4a77;
+        }
+        .highlight {
+            background: linear-gradient(135deg, #e8f4fd 0%, #d4e9f7 100%);
+            border-left: 4px solid #2d4a77;
+            padding: 15px 20px;
+            margin: 15px 0;
+        }
+        .notes {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px dashed #ddd;
+        }
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .summary-table th,
+        .summary-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .summary-table th {
+            background: #f5f7fa;
+            color: #1a365d;
+            font-weight: 600;
+        }
+        .summary-table tr:hover {
+            background: #fafbfc;
+        }
+        .address-history {
+            background: #f8f9fa;
+            padding: 20px 25px;
+            border-radius: 4px;
+            margin-top: 30px;
+        }
+        .address-history h3 {
+            color: #1a365d;
+            margin-bottom: 15px;
+        }
+        .address-item {
+            padding: 8px 0;
+            border-bottom: 1px dotted #ddd;
+        }
+        .address-item:last-child {
+            border-bottom: none;
+        }
+        footer {
+            background: #f5f7fa;
+            padding: 25px 45px;
+            text-align: center;
+            color: #888;
+            font-size: 0.9em;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Scott Ripley</h1>
+            <p>Career Data Extracted from Job Letters & HR Records (1995–2025)</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro">
+                This document contains verified career data extracted from 26 scanned job letters, offer letters, resignation letters, salary review correspondence, and current employer HR records. These primary source documents provide contemporaneous evidence of employment history, salary progression, and career milestones spanning 30 years in the quantity surveying profession.
+            </div>
+
+            <h2>Career Summary</h2>
+            <table class="summary-table">
+                <thead>
+                    <tr>
+                        <th>Period</th>
+                        <th>Employer</th>
+                        <th>Final Role</th>
+                        <th>Final Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1991–1995</td>
+                        <td>Hanson & Beards Ltd</td>
+                        <td>Apprentice</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Sept 1995–1996</td>
+                        <td>Brearleys Limited</td>
+                        <td>MTC Manager</td>
+                        <td>£13,000</td>
+                    </tr>
+                    <tr>
+                        <td>June 1996–2000</td>
+                        <td>Faithful & Gould</td>
+                        <td>Assistant QS</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Nov 2000–2002</td>
+                        <td>Faithful & Gould (Leeds)</td>
+                        <td>Quantity Surveyor</td>
+                        <td>£24,000</td>
+                    </tr>
+                    <tr>
+                        <td>Aug 2002</td>
+                        <td>Rex Procter & Partners</td>
+                        <td>Quantity Surveyor (offer)</td>
+                        <td>£27,250</td>
+                    </tr>
+                    <tr>
+                        <td>June 2003–May 2007</td>
+                        <td>Richard Boothroyd & Associates</td>
+                        <td>Associate Director</td>
+                        <td>£50,000</td>
+                    </tr>
+                    <tr>
+                        <td>June 2007–July 2008</td>
+                        <td>K W Linfoot PLC</td>
+                        <td>Development Surveyor</td>
+                        <td>£55,000</td>
+                    </tr>
+                    <tr>
+                        <td>June 2008–2015</td>
+                        <td>Cyril Sweett / Sweett Group</td>
+                        <td>Project Director</td>
+                        <td>£67,500</td>
+                    </tr>
+                    <tr>
+                        <td>2015–2023</td>
+                        <td>Scott Ripley & Associates Ltd</td>
+                        <td>Director (Own Business)</td>
+                        <td>£1.2m+ profit over 8 years</td>
+                    </tr>
+                    <tr style="background: #e8f4fd;">
+                        <td>Nov 2023–Present</td>
+                        <td>Atkins (AtkinsRéalis)</td>
+                        <td>Cost Manager / QS</td>
+                        <td>£80,450</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Detailed Employment History</h2>
+
+            <div class="employer">
+                <h3>Hanson & Beards Ltd</h3>
+                <div class="period">1991 – 17th March 1995</div>
+                <div class="role">Apprenticeship</div>
+                <div class="detail-row">
+                    <span class="detail-label">Location:</span>
+                    <span class="detail-value">Leathley Road, Leeds LS10 1BG</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">End Date:</span>
+                    <span class="detail-value">Friday 17th March 1995</span>
+                </div>
+                <div class="notes">
+                    Letter dated 10th March 1995 from Mr R Storey (Office Manager) confirming apprenticeship end. "When your Apprenticeship ends on 15th March 1995, we are unable to offer you continuing employment." Apprenticeship Agreement endorsed and sent to NJCBI for signing.
+                </div>
+            </div>
+
+            <div class="employer">
+                <h3>Brearleys Limited (Sata Limited)</h3>
+                <div class="period">September 1995 – Late 1996</div>
+                <div class="role">Contracts/Estimating Assistant → MTC Manager</div>
+                <div class="detail-row">
+                    <span class="detail-label">Location:</span>
+                    <span class="detail-value">Springwell Works, Church Street, Heckmondwike WF16 0LF</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Business:</span>
+                    <span class="detail-value">Joiners, Barfitters & Building Contractors</span>
+                </div>
+                <div class="salary-progression">
+                    <h4>Salary Progression</h4>
+                    <div class="salary-item">
+                        <span class="salary-date">4th September 1995</span>
+                        <span class="salary-amount">£6,700 p.a. (Contracts/Estimating Assistant)</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">25th November 1996</span>
+                        <span class="salary-amount">£13,000 p.a. (MTC Manager)</span>
+                    </div>
+                </div>
+                <div class="notes">
+                    4 weeks annual holiday including a week at Easter and Christmas plus bank holidays. Promotion letter from Paul M Duffill (Director) offering use of pool vehicle when available, with business mileage paid. Hours commenced at 7.30am.
+                </div>
+            </div>
+
+            <div class="employer">
+                <h3>Faithful & Gould</h3>
+                <div class="period">10th June 1996 – November 2000</div>
+                <div class="role">Assistant Quantity Surveyor</div>
+                <div class="detail-row">
+                    <span class="detail-label">Location:</span>
+                    <span class="detail-value">Westgate House, Westgate, Altrincham WA14 2EX (initial) → Brigade House, 86 Kirkstall Road, Leeds LS3 1LS</span>
+                </div>
+                <div class="highlight">
+                    Day release entitlement confirmed: "We confirm you will be entitled to attend college on a day release basis to complete your HND studies, followed by an approved course in Quantity Surveying."
+                </div>
+                <div class="notes">
+                    Offer letter dated 31st May 1996 from L Stephenson (Director). Part of WS Atkins group.
+                </div>
+            </div>
+
+            <div class="employer">
+                <h3>Faithful & Gould (Leeds)</h3>
+                <div class="period">November 2000 – April 2002</div>
+                <div class="role">Quantity Surveyor</div>
+                <div class="detail-row">
+                    <span class="detail-label">Location:</span>
+                    <span class="detail-value">Brigade House, 86 Kirkstall Road, Leeds LS3 1LS</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Benefits:</span>
+                    <span class="detail-value">Company car, Pension Scheme, BUPA, discretionary annual bonus</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Holiday:</span>
+                    <span class="detail-value">20 days (option for 23 days with salary adjustment)</span>
+                </div>
+                <div class="salary-progression">
+                    <h4>Salary Progression</h4>
+                    <div class="salary-item">
+                        <span class="salary-date">8th November 2000</span>
+                        <span class="salary-amount">£20,000 p.a. (or £19,750 with 23 days holiday)</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">1st April 2002</span>
+                        <span class="salary-amount">£24,000 p.a.</span>
+                    </div>
+                </div>
+                <div class="notes">
+                    Offer from PCH/ST dated 8th November 2000. April 2002 letter notes "2002/2003 looks set to be another successful year for Faithful&Gould" but references competitive market conditions requiring prudent salary approach.
+                </div>
+            </div>
+
+            <div class="employer">
+                <h3>Rex Procter & Partners</h3>
+                <div class="period">December 1998 (interview) / August 2002 (offer)</div>
+                <div class="role">Trainee Quantity Surveyor → Quantity Surveyor</div>
+                <div class="detail-row">
+                    <span class="detail-label">Location:</span>
+                    <span class="detail-value">Blenwood Court, 451 Cleckheaton Road, Low Moor, Bradford BD12 0NY</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Business:</span>
+                    <span class="detail-value">Chartered Quantity Surveyors, Project Managers, Construction Consultants</span>
+                </div>
+                <div class="salary-progression">
+                    <h4>Offers Received</h4>
+                    <div class="salary-item">
+                        <span class="salary-date">24th December 1998</span>
+                        <span class="salary-amount">£15,000 p.a. (Assistant QS, course fees paid)</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">5th August 2002 (Option A)</span>
+                        <span class="salary-amount">£24,000 p.a. + company car</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">5th August 2002 (Option B)</span>
+                        <span class="salary-amount">£27,250 p.a. (own vehicle)</span>
+                    </div>
+                </div>
+                <div class="highlight">
+                    August 2002 letter: "We encourage career enhancement through sponsored training, particularly in respect of RICS and we would actively encourage your ambition to achieve MRICS qualification next year."
+                </div>
+                <div class="notes">
+                    Authorised overtime paid at 1¼ times pro-rata hourly rate. Contributory Final Salary Pension Scheme: 2% Employee / 6.5% Practice (or 5% Employee option). 25 days holiday. Interview 21st December 1998 with M A Watson (Associate). Offer letter from J Stephen Watkins FRICS MaPS.
+                </div>
+            </div>
+
+            <div class="employer">
+                <h3>Richard Boothroyd & Associates (RBA)</h3>
+                <div class="period">June 2003 – 25th May 2007</div>
+                <div class="role">Quantity Surveyor → Associate Director</div>
+                <div class="detail-row">
+                    <span class="detail-label">Location:</span>
+                    <span class="detail-value">Riverside West, Whitehall Road, Leeds LS1 4AW</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Business:</span>
+                    <span class="detail-value">Chartered Quantity Surveyors and Project Management</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Company Car:</span>
+                    <span class="detail-value">VW Golf TDi/GTi or equivalent</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Pension:</span>
+                    <span class="detail-value">5% company contribution</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Holiday:</span>
+                    <span class="detail-value">20 days plus statutory holidays</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Hours:</span>
+                    <span class="detail-value">9.00am to 5.30pm with an hour for lunch</span>
+                </div>
+                <div class="salary-progression">
+                    <h4>Salary Progression</h4>
+                    <div class="salary-item">
+                        <span class="salary-date">13th June 2003</span>
+                        <span class="salary-amount">£30,000 p.a.</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">1st June 2004</span>
+                        <span class="salary-amount">£37,500 p.a.</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">March 2005</span>
+                        <span class="salary-amount">+ £2,000 bonus</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">1st June 2005</span>
+                        <span class="salary-amount">£45,000 p.a.</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">1st May 2006</span>
+                        <span class="salary-amount">£50,000 p.a.</span>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <strong>14th April 2004:</strong> Promoted to Associate Director. Announcement letter from Richard D Boothroyd (Chairman) states: "Scott has established himself as a key member of the business, and has already made a significant contribution in maintaining, promoting and enhancing the RBA brand."
+                </div>
+                <div class="notes">
+                    Offer letter signed by Billy Paton. Key figures: Chairman Richard D Boothroyd FRICS, Managing Director Billy Paton MRICS, Directors A Malcolm Denney FRICS, Richard E Briggs MRICS. Resignation letter dated 27th April 2007 references management buyout situation and feeling "quite bitter and used" after becoming involved in negotiations on both sides.
+                </div>
+            </div>
+
+            <div class="employer">
+                <h3>K W Linfoot PLC</h3>
+                <div class="period">11th June 2007 – 31st July 2008</div>
+                <div class="role">Development Surveyor</div>
+                <div class="detail-row">
+                    <span class="detail-label">Location:</span>
+                    <span class="detail-value">Whitehall Waterfront, 2 Riverside Way, Leeds LS1 4EH</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Reporting to:</span>
+                    <span class="detail-value">Development Director</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Hours:</span>
+                    <span class="detail-value">Monday to Friday, 8.30am to 5.30pm with one hour for lunch</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Holiday:</span>
+                    <span class="detail-value">25 days (7 days at Building Industry closedown)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Pension:</span>
+                    <span class="detail-value">5% Company + 5% Employee; 4x salary life assurance</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Mileage:</span>
+                    <span class="detail-value">Inland Revenue Authorised Mileage Rates</span>
+                </div>
+                <div class="salary-progression">
+                    <h4>Salary & Bonus</h4>
+                    <div class="salary-item">
+                        <span class="salary-date">24th May 2007</span>
+                        <span class="salary-amount">£55,000 p.a.</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">2007 Bonus</span>
+                        <span class="salary-amount">£5,000 guaranteed</span>
+                    </div>
+                </div>
+                <div class="notes">
+                    Offer letter dated 24th May 2007 from Managing Director. Resignation letter dated 25th June 2008 to Ged Feeley notes outstanding pension issue from June–December 2007 requiring backdated payment.
+                </div>
+            </div>
+
+            <div class="employer">
+                <h3>Cyril Sweett Limited / Sweett (UK) Limited / Sweett Group</h3>
+                <div class="period">June 2008 – 2015+</div>
+                <div class="role">Associate Director → Project Director – Cost Consultant</div>
+                <div class="detail-row">
+                    <span class="detail-label">Head Office:</span>
+                    <span class="detail-value">60 Gray's Inn Road, London WC1X 8AQ</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Leeds Office:</span>
+                    <span class="detail-value">9th Floor, Tower North Central, Merrion Way, Leeds LS2 8PA</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Reporting to:</span>
+                    <span class="detail-value">Kenneth Wood (Regional Operations Director / Senior Director), Rob Sale (Senior Director)</span>
+                </div>
+                <div class="salary-progression">
+                    <h4>Salary Progression</h4>
+                    <div class="salary-item">
+                        <span class="salary-date">June 2008</span>
+                        <span class="salary-amount">Associate Director (start)</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">Pre-May 2009</span>
+                        <span class="salary-amount">£49,500 p.a.</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">1st May 2009</span>
+                        <span class="salary-amount">£46,050 p.a. (economic reduction)</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">1st October 2010</span>
+                        <span class="salary-amount">£47,300 p.a.</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">1st October 2012</span>
+                        <span class="salary-amount">£48,750 p.a.</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">1st October 2013</span>
+                        <span class="salary-amount">£51,250 p.a.</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">1st April 2014</span>
+                        <span class="salary-amount">£60,000 p.a. + £5,850 car allowance (Promotion to Project Director)</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">1st January 2015</span>
+                        <span class="salary-amount">£67,500 reference salary (£65,475 adjusted for salary exchange pension)</span>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <strong>1st April 2014:</strong> Promoted to Project Director – Cost Consultant. Letter from Rob Sale (Senior Director) states: "As a mark of your continued high performance, with effect from 1st April 2014, we will formally be promoting you to the position of Project Director – Cost Consultant."
+                </div>
+                <div class="notes">
+                    <p><strong>April 2009 Salary Reduction:</strong> During economic downturn, salary reduced from £49,500 to £46,050 (7% reduction). Life assurance reduced to 1.5x salary. Required to take 4 days unpaid leave 21–24 December 2009.</p>
+                    <p><strong>May 2014 Total Reward Statement:</strong> Salary £60,000 + Car Allowance £5,850 + PHI £420 + Company Pension Contribution £3,000 + Life Assurance Cover £288 + PMI £1,275 = Total £70,833</p>
+                    <p><strong>December 2014:</strong> Salary Exchange Pension Scheme introduced. Reference salary £67,500, adjusted salary £65,475.</p>
+                    <p><strong>Note:</strong> Left Sweett Group in 2015 to establish Scott Ripley & Associates Ltd, his own quantity surveying consultancy.</p>
+                </div>
+            </div>
+
+            <div class="employer">
+                <h3>Scott Ripley & Associates Ltd (SRA)</h3>
+                <div class="period">2015 – 2023</div>
+                <div class="role">Director / Owner</div>
+                <div class="detail-row">
+                    <span class="detail-label">Business Type:</span>
+                    <span class="detail-value">Quantity Surveying and Construction Consultancy</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Location:</span>
+                    <span class="detail-value">Yorkshire-based, serving commercial clients across the region</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Key Clients:</span>
+                    <span class="detail-value">GMI, TCS, and others</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Notable Projects:</span>
+                    <span class="detail-value">Eider House/Burlington, Hornbeam Park, Victoria Park House, Cold Bath Road</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Team:</span>
+                    <span class="detail-value">Claire Ripley (operations), Bernie Simms, Geoff, sub-contractors</span>
+                </div>
+                <div class="salary-progression">
+                    <h4>Business Performance (8 Years)</h4>
+                    <div class="salary-item">
+                        <span class="salary-date">Total Income</span>
+                        <span class="salary-amount">£1,222,500</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">Total Profit</span>
+                        <span class="salary-amount">£1,002,500</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">Average Annual Income</span>
+                        <span class="salary-amount">£163,000</span>
+                    </div>
+                </div>
+                <div class="salary-progression">
+                    <h4>Annual Profit by Year</h4>
+                    <div class="salary-item">
+                        <span class="salary-date">2015/16</span>
+                        <span class="salary-amount">£75,000</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">2016/17</span>
+                        <span class="salary-amount">£130,000</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">2017/18</span>
+                        <span class="salary-amount">£97,000–£110,000</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">2018/19</span>
+                        <span class="salary-amount">£97,000–£110,000</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">2019/20</span>
+                        <span class="salary-amount">(challenging year)</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">2020/21</span>
+                        <span class="salary-amount">£187,500</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">2021/22</span>
+                        <span class="salary-amount">£206,000 (peak)</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">2022/23</span>
+                        <span class="salary-amount">£197,000</span>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <strong>Entrepreneurial Achievement:</strong> After 20+ years building expertise as an employed quantity surveyor, Scott took the entrepreneurial step to establish his own consultancy. Over eight years, SRA generated over £1 million in profit, demonstrating successful transition from employee to business owner. Claire worked alongside Scott throughout this period, and the business maintained strong performance particularly during 2020–22.
+                </div>
+                <div class="notes">
+                    Total personal tax paid through the business: approximately £174,126. Business closed in 2023, leading to return to employed status at Atkins.
+                </div>
+            </div>
+
+            <div class="employer" style="border-left: 4px solid #2d4a77; background: linear-gradient(135deg, #f0f7ff 0%, #e8f0f8 100%);">
+                <h3>Atkins (AtkinsRéalis)</h3>
+                <div class="period">6th November 2023 – Present</div>
+                <div class="role">Cost Manager / Quantity Surveyor</div>
+                <div class="detail-row">
+                    <span class="detail-label">Company:</span>
+                    <span class="detail-value">AtkinsRéalis (formerly WS Atkins / SNC-Lavalin)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Currency:</span>
+                    <span class="detail-value">GBP, paid annually</span>
+                </div>
+                <div class="salary-progression">
+                    <h4>Salary Progression</h4>
+                    <div class="salary-item">
+                        <span class="salary-date">6th November 2023 (New Hire)</span>
+                        <span class="salary-amount">£70,000 base + £5,500 allowances = £75,500 total</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">1st March 2024 (Annual Review)</span>
+                        <span class="salary-amount">£71,750 base + £5,500 allowances = £77,250 total</span>
+                    </div>
+                    <div class="salary-item">
+                        <span class="salary-date">1st March 2025 (Annual Review)</span>
+                        <span class="salary-amount">£74,950 base + £5,500 allowances = £80,450 total</span>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <strong>Current Employment:</strong> After over 30 years in the quantity surveying profession, now working for one of the world's leading engineering and project management consultancies. Notable that Atkins was historically part of the WS Atkins group — the same group that owned Faithful & Gould where Scott began his qualified career in 1996.
+                </div>
+            </div>
+
+            <h2>Addresses During Career</h2>
+            <div class="address-history">
+                <div class="address-item">
+                    <strong>1995–1996:</strong> 53 Chandos Gardens, Leeds LS8 1LP
+                </div>
+                <div class="address-item">
+                    <strong>1998–2002:</strong> 24 Summerhill Road, Methley, Leeds LS26 9HU
+                </div>
+                <div class="address-item">
+                    <strong>2003–Present:</strong> 41 Pinfold Lane, Methley, Leeds LS26 9AA
+                </div>
+            </div>
+
+            <h2>Qualifications & Professional Development</h2>
+            <div class="employer">
+                <div class="detail-row">
+                    <span class="detail-label">Apprenticeship:</span>
+                    <span class="detail-value">Completed March 1995, Hanson & Beards Ltd (NJCBI endorsed)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">HND Studies:</span>
+                    <span class="detail-value">Day release during Faithful & Gould employment (1996)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Degree:</span>
+                    <span class="detail-value">BSc (Hons) – referenced in RBA letterhead as Scott Ripley BSc (Hons)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">MRICS:</span>
+                    <span class="detail-value">Actively encouraged by Rex Procter & Partners (2002)</span>
+                </div>
+            </div>
+
+            <h2>Key Career Milestones</h2>
+            <table class="summary-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Milestone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>March 1995</td>
+                        <td>Completed apprenticeship at Hanson & Beards Ltd</td>
+                    </tr>
+                    <tr>
+                        <td>June 1996</td>
+                        <td>Started at Faithful & Gould with day release for studies</td>
+                    </tr>
+                    <tr>
+                        <td>November 2000</td>
+                        <td>Qualified Quantity Surveyor position at Faithful & Gould Leeds</td>
+                    </tr>
+                    <tr>
+                        <td>June 2003</td>
+                        <td>Joined Richard Boothroyd & Associates at £30,000</td>
+                    </tr>
+                    <tr>
+                        <td>April 2004</td>
+                        <td>Promoted to Associate Director at RBA</td>
+                    </tr>
+                    <tr>
+                        <td>May 2007</td>
+                        <td>Reached £50,000 salary at RBA</td>
+                    </tr>
+                    <tr>
+                        <td>June 2007</td>
+                        <td>Development Surveyor at K W Linfoot PLC (£55,000)</td>
+                    </tr>
+                    <tr>
+                        <td>June 2008</td>
+                        <td>Associate Director at Cyril Sweett Limited</td>
+                    </tr>
+                    <tr>
+                        <td>April 2014</td>
+                        <td>Promoted to Project Director – Cost Consultant at Sweett (UK)</td>
+                    </tr>
+                    <tr>
+                        <td>January 2015</td>
+                        <td>Reference salary reaches £67,500 at Sweett Group</td>
+                    </tr>
+                    <tr>
+                        <td>2015</td>
+                        <td>Established Scott Ripley & Associates Ltd – own consultancy</td>
+                    </tr>
+                    <tr>
+                        <td>2021/22</td>
+                        <td>SRA achieves peak profit of £206,000</td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td>SRA business closes after 8 successful years</td>
+                    </tr>
+                    <tr style="background: #e8f4fd;">
+                        <td>November 2023</td>
+                        <td>Joined Atkins (AtkinsRéalis) at £75,500 total package</td>
+                    </tr>
+                    <tr style="background: #e8f4fd;">
+                        <td>March 2025</td>
+                        <td>Current salary reaches £80,450 total package</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <footer>
+            Career Data extracted from 26 job letters (scanned 22nd October 2022) and Atkins HR records | Document prepared December 2025
+        </footer>
+    </div>
+</body>
+</html>
